@@ -1,0 +1,40 @@
+.como-comprar {
+  padding: 4rem 2rem;
+  background-color: #e8f5e9;
+  text-align: center;
+}
+
+.como-comprar h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2e7d32;
+}
+
+.pasos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.paso {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.paso span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.paso h3 {
+  margin: 0.5rem 0;
+  color: #1b5e20;
+}
+
+.paso p {
+  font-size: 0.95rem;
+  color: #444;
+}

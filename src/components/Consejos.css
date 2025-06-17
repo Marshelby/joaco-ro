@@ -1,0 +1,35 @@
+.consejos {
+  padding: 4rem 2rem;
+  background-color: #fffde7;
+  text-align: center;
+}
+
+.consejos h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f9a825;
+}
+
+.consejos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.consejo-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.consejo-card h3 {
+  color: #f57f17;
+  margin-bottom: 0.5rem;
+}
+
+.consejo-card p {
+  color: #444;
+  font-size: 0.95rem;
+}

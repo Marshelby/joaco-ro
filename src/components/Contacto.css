@@ -1,0 +1,38 @@
+.contacto {
+  padding: 4rem 2rem;
+  background-color: #f3e5f5;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #6a1b9a;
+}
+
+.contacto-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.contacto-item {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contacto-item h3 {
+  margin-bottom: 0.5rem;
+  color: #4a148c;
+}
+
+.contacto-item a {
+  color: #4a148c;
+  text-decoration: none;
+}
+
+.contacto-item a:hover {
+  text-decoration: underline;
+}
