@@ -1,4 +1,5 @@
 import './Hero.css'
+import productosHero from '../assets/hero-productos.png'
 
 function Hero() {
   return (
@@ -15,15 +16,19 @@ function Hero() {
           rel="noreferrer"
         >
           <button className="hero-button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="icono-wsp" />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp"
+              className="icono-wsp"
+            />
             Pedir por WhatsApp
           </button>
         </a>
       </div>
       <div className="hero-imagen">
         <img
-          src="https://cdn.pixabay.com/photo/2017/01/04/14/37/cleaning-1958800_1280.jpg"
-          alt="Productos de limpieza Joaco Ro"
+          src={productosHero}
+          alt="Productos Joaco Ro"
         />
       </div>
     </section>
