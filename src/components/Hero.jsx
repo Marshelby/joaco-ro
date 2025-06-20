@@ -1,5 +1,4 @@
 import './Hero.css'
-import heroImage from './assets/default.jpg' // o reemplázalo por tu imagen real
 
 function Hero() {
   return (
@@ -20,7 +19,10 @@ function Hero() {
         </a>
       </div>
       <div className="hero-imagen">
-        <img src={heroImage} alt="Productos de limpieza Joaco Ro" />
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/01/09/56/cleaning-2276395_1280.jpg"
+          alt="Productos de limpieza Joaco Ro"
+        />
       </div>
     </section>
   )
