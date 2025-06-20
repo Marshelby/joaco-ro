@@ -82,6 +82,12 @@
   height: 20px;
 }
 
+.hero-info-extra {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
 .hero-imagen {
   flex: 1;
   min-width: 300px;
