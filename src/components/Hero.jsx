@@ -1,5 +1,6 @@
 import './Hero.css'
 import productosHero from '../assets/hero-productos.png'
+import logoJoacoRo from '../assets/joacoro-logo.png'
 
 function Hero() {
   return (
@@ -27,6 +28,11 @@ function Hero() {
         <p className="hero-info-extra">📍 Estamos en Quilpué – atención personalizada</p>
       </div>
       <div className="hero-imagen">
+        <img
+          src={logoJoacoRo}
+          alt="Joaco Ro Logo"
+          className="hero-logo"
+        />
         <img
           src={productosHero}
           alt="Productos Joaco Ro"
