@@ -17,6 +17,17 @@
   text-align: left;
 }
 
+.hero-badge {
+  background-color: #ffeb3b;
+  color: #333;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
 .hero-subtitulo {
   display: block;
   font-size: 1rem;
@@ -34,9 +45,16 @@
 
 .hero-texto p {
   font-size: 1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #333;
   line-height: 1.6;
+}
+
+.hero-frase {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #00796b;
+  margin-bottom: 2rem;
 }
 
 .hero-button {
