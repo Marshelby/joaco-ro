@@ -4,47 +4,49 @@ const productos = [
   {
     id: 1,
     nombre: 'Detergente Matic 3L',
-    precio: '$3.500',
-    imagen: '', // sin imagen por ahora
+    precioUnidad: '$3.500',
+    precioMayor: '$3.200',
+    imagen: '',
   },
   {
     id: 2,
     nombre: 'Cloro Gel 1L',
-    precio: '$1.200',
+    precioUnidad: '$1.200',
+    precioMayor: '$1.000',
     imagen: '',
   },
   {
     id: 3,
     nombre: 'Aromatizante Lavanda',
-    precio: '$1.000',
+    precioUnidad: '$1.000',
+    precioMayor: '$900',
     imagen: '',
   },
-  // Puedes agregar más productos después
+  // puedes continuar con los otros 7 productos
 ]
 
 function Catalogo() {
   return (
     <section id="catalogo" className="catalogo">
       <h2>Catálogo de Productos</h2>
+      <p className="catalogo-subtitulo">🛒 Elige tus productos por unidad o por mayor (desde 4 unidades)</p>
       <div className="catalogo-grid">
         {productos.map((producto) => (
           <div className="producto-card" key={producto.id}>
-            <img
-              src={producto.imagen || '/assets/default.jpg'}
-              alt={producto.nombre}
-              onError={(e) => {
-                e.target.onerror = null
-                e.target.src = '/assets/default.jpg'
-              }}
-            />
+            <div className="img-placeholder">
+              <span>Imagen</span>
+            </div>
             <h3>{producto.nombre}</h3>
-            <p className="precio">{producto.precio}</p>
+            <p className="precio-unidad">Por unidad: <strong>{producto.precioUnidad}</strong></p>
+            <p className="precio-mayor">Por mayor (4+): <strong>{producto.precioMayor}</strong></p>
             <a
               href={`https://wa.me/56967215364?text=Hola, quiero comprar el producto: ${producto.nombre}`}
               target="_blank"
               rel="noreferrer"
             >
-              <button>Comprar</button>
+              <button>
+                🛍️ Agregar al pedido
+              </button>
             </a>
           </div>
         ))}
