@@ -8,21 +8,21 @@ const productos = [
     precioUnidad: "$3.500",
     precioMayor: "$3.200",
     imagen: detergenteImage,
-    fondo: "#e8f5e9", // verde suave fijo
+    fondo: "#ffffff",
   },
   {
     nombre: "Cloro Gel 1L",
     precioUnidad: "$1.200",
     precioMayor: "$1.000",
     imagen: null,
-    fondo: "#f5f5f5",
+    fondo: "#ffffff",
   },
   {
     nombre: "Aromatizante Lavanda",
     precioUnidad: "$1.000",
     precioMayor: "$900",
     imagen: null,
-    fondo: "#f5f5f5",
+    fondo: "#ffffff",
   },
 ];
 
@@ -49,9 +49,9 @@ function Catalogo() {
             ) : (
               <div className="imagen-placeholder">Imagen</div>
             )}
-            <h3>{producto.nombre}</h3>
-            <p>Por unidad: <strong>{producto.precioUnidad}</strong></p>
-            <p>Por mayor (4+): <strong>{producto.precioMayor}</strong></p>
+            <h3 className="producto-nombre">{producto.nombre}</h3>
+            <p className="producto-precio">Por unidad: <strong>{producto.precioUnidad}</strong></p>
+            <p className="producto-precio">Por mayor (4+): <strong>{producto.precioMayor}</strong></p>
             <button className="boton-agregar">🧺 Agregar al pedido</button>
           </div>
         ))}
