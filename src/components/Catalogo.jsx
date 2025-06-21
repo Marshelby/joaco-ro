@@ -1,61 +1,70 @@
-// Catalogo.jsx
+// src/components/Catalogo.jsx
 import React from "react";
-import "./Catalogo.css";
+import "../assets/Catalogo.css";
 import { FaCartPlus } from "react-icons/fa";
-import producto1 from "../assets/detergente_matic_3l.png";
+
+import detergenteImg from "../assets/productos/detergente-matic-3l.png"; // ✅ Ruta corregida
 
 const productos = [
   {
-    id: 1,
     nombre: "Detergente Matic 3L",
-    precioUnidad: 3500,
-    precioMayor: 3200,
-    imagen: producto1,
+    precioUnidad: "$3.500",
+    precioMayor: "$3.200",
+    imagen: detergenteImg,
+    fondo: "#eafbe5", // verde claro personalizado
   },
   {
-    id: 2,
     nombre: "Cloro Gel 1L",
-    precioUnidad: 1200,
-    precioMayor: 1000,
+    precioUnidad: "$1.200",
+    precioMayor: "$1.000",
     imagen: null,
+    fondo: "#f1f1f1",
   },
   {
-    id: 3,
     nombre: "Aromatizante Lavanda",
-    precioUnidad: 1000,
-    precioMayor: 900,
+    precioUnidad: "$1.000",
+    precioMayor: "$900",
     imagen: null,
+    fondo: "#f1f1f1",
   },
 ];
 
 const Catalogo = () => {
   return (
-    <div className="catalog-container">
-      <h2 className="catalog-title">Catálogo de Productos</h2>
-      <p className="catalog-subtitle">
-        🛒 Elige tus productos por unidad o por mayor (desde 4 unidades)
+    <section className="catalogo">
+      <h2 className="catalogo-titulo">Catálogo de Productos</h2>
+      <p className="catalogo-subtitulo">
+        <FaCartPlus className="icono-carro" /> Elige tus productos por unidad o
+        por mayor (desde 4 unidades)
       </p>
-      <div className="product-grid">
-        {productos.map((producto) => (
-          <div key={producto.id} className="card">
-            {producto.imagen ? (
-              <img src={producto.imagen} alt={producto.nombre} />
-            ) : (
-              <div style={{ width: "100%", height: "120px", background: "#ddd", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem" }}>
-                <span>Imagen</span>
-              </div>
-            )}
-            <h3>{producto.nombre}</h3>
-            <p>Por unidad: <strong>${producto.precioUnidad.toLocaleString()}</strong></p>
-            <p>Por mayor (4+): <strong>${producto.precioMayor.toLocaleString()}</strong></p>
-            <button disabled>
-              <FaCartPlus />
-              Agregar al pedido
+      <div className="catalogo-grid">
+        {productos.map((producto, index) => (
+          <div
+            className="producto-card"
+            key={index}
+            style={{ backgroundColor: producto.fondo }}
+          >
+            <div className="producto-imagen">
+              {producto.imagen ? (
+                <img src={producto.imagen} alt={producto.nombre} />
+              ) : (
+                <div className="imagen-placeholder">Imagen</div>
+              )}
+            </div>
+            <h3 className="producto-nombre">{producto.nombre}</h3>
+            <p className="producto-precio">
+              Por unidad: <strong>{producto.precioUnidad}</strong>
+            </p>
+            <p className="producto-precio">
+              Por mayor (4+): <strong>{producto.precioMayor}</strong>
+            </p>
+            <button className="btn-agregar" disabled>
+              <FaCartPlus /> Agregar al pedido
             </button>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
