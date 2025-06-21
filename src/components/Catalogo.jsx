@@ -1,7 +1,7 @@
 import React from "react";
 import "./Catalogo.css";
 import detergenteImage from "../assets/productos/detergente-matic-3l.png";
-import tituloCatalogo from "../assets/titulos/catalogo-productos.png"; // nueva línea
+import tituloCatalogo from "../assets/titulos/catalogo-productos.png";
 
 const productos = [
   {
@@ -30,9 +30,7 @@ const productos = [
 function Catalogo() {
   return (
     <div className="catalogo-container">
-      {/* Reemplazamos el título por imagen */}
       <img src={tituloCatalogo} alt="Catálogo de productos" className="titulo-imagen" />
-      
       <p className="catalogo-subtitulo">
         🛒 Elige tus productos por unidad o por mayor (desde 4 unidades)
       </p>
