@@ -37,12 +37,13 @@ function ProductoCard({ producto }) {
       img.crossOrigin = 'Anonymous'
       img.src = producto.imagen
       img.onload = () => {
-        const color = ColorThief.getColor(img)
+        const colorThief = new ColorThief()
+        const color = colorThief.getColor(img)
         const [r, g, b] = color
         const backgroundColor = `rgb(${r}, ${g}, ${b})`
         setColorFondo(backgroundColor)
 
-        // Luminosidad (YIQ) para elegir color de texto
+        // Luminosidad (YIQ)
         const yiq = (r * 299 + g * 587 + b * 114) / 1000
         const textColor = yiq >= 150 ? '#000000' : '#ffffff'
         setColorTexto(textColor)

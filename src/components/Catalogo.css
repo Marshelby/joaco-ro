@@ -30,6 +30,9 @@
   width: 100%;
   max-width: 280px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .producto-card:hover {
@@ -40,14 +43,16 @@
 .producto-card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.6rem;
-  color: #333;
+  color: inherit;
+  text-align: center;
 }
 
 .precio-unidad,
 .precio-mayor {
   font-size: 0.95rem;
   margin: 0.2rem 0;
-  color: #333;
+  color: inherit;
+  text-align: center;
 }
 
 .img-placeholder {
@@ -73,6 +78,7 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
+  max-width: 260px;
 }
 
 button:hover {
