@@ -1,7 +1,7 @@
 import React from "react";
 import "./Catalogo.css";
 import detergenteImage from "../assets/productos/detergente-matic-3l.png";
-import tituloCatalogo from "../assets/titulos/catalogo-productos.png";
+import tituloCatalogo from "../assets/titulos/catalogo.png"; // ✅ NUEVO archivo
 
 const productos = [
   {
