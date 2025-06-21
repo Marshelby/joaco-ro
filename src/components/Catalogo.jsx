@@ -1,6 +1,7 @@
 import React from "react";
 import "./Catalogo.css";
 import detergenteImage from "../assets/productos/detergente-matic-3l.png";
+import tituloCatalogo from "../assets/titulos/catalogo-productos.png"; // nueva línea
 
 const productos = [
   {
@@ -8,7 +9,7 @@ const productos = [
     precioUnidad: "$3.500",
     precioMayor: "$3.200",
     imagen: detergenteImage,
-    fondo: "#e6f9ec" // verde suave profesional
+    fondo: "#e6f9ec"
   },
   {
     nombre: "Cloro Gel 1L",
@@ -29,7 +30,9 @@ const productos = [
 function Catalogo() {
   return (
     <div className="catalogo-container">
-      <h2 className="catalogo-titulo">Catálogo de Productos</h2>
+      {/* Reemplazamos el título por imagen */}
+      <img src={tituloCatalogo} alt="Catálogo de productos" className="titulo-imagen" />
+      
       <p className="catalogo-subtitulo">
         🛒 Elige tus productos por unidad o por mayor (desde 4 unidades)
       </p>
