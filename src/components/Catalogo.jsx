@@ -1,6 +1,6 @@
 // src/components/Catalogo.jsx
 import React from "react";
-import "../assets/Catalogo.css";
+import "./Catalogo.css";
 import { FaCartPlus } from "react-icons/fa";
 
 import detergenteImg from "../assets/productos/detergente-matic-3l.png"; // ✅ Ruta corregida
