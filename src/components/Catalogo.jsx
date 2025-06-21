@@ -1,110 +1,62 @@
-import './Catalogo.css'
-import { useEffect, useState } from 'react'
-import imgDetergente from '../assets/productos/detergente-matic-3l.png'
+// Catalogo.jsx
+import React from "react";
+import "./Catalogo.css";
+import { FaCartPlus } from "react-icons/fa";
+import producto1 from "../assets/detergente_matic_3l.png";
 
-const productosIniciales = [
+const productos = [
   {
     id: 1,
-    nombre: 'Detergente Matic 3L',
-    precioUnidad: '$3.500',
-    precioMayor: '$3.200',
-    imagen: imgDetergente
+    nombre: "Detergente Matic 3L",
+    precioUnidad: 3500,
+    precioMayor: 3200,
+    imagen: producto1,
   },
   {
     id: 2,
-    nombre: 'Cloro Gel 1L',
-    precioUnidad: '$1.200',
-    precioMayor: '$1.000',
-    imagen: ''
+    nombre: "Cloro Gel 1L",
+    precioUnidad: 1200,
+    precioMayor: 1000,
+    imagen: null,
   },
   {
     id: 3,
-    nombre: 'Aromatizante Lavanda',
-    precioUnidad: '$1.000',
-    precioMayor: '$900',
-    imagen: ''
-  }
-]
+    nombre: "Aromatizante Lavanda",
+    precioUnidad: 1000,
+    precioMayor: 900,
+    imagen: null,
+  },
+];
 
-function ProductoCard({ producto }) {
-  const [colorFondo, setColorFondo] = useState('#ffffff')
-  const [colorTexto, setColorTexto] = useState('#000000')
-
-  useEffect(() => {
-    if (producto.imagen && typeof window !== 'undefined') {
-      import('color-thief-browser').then(({ default: ColorThief }) => {
-        const img = new Image()
-        img.crossOrigin = 'Anonymous'
-        img.src = producto.imagen
-        img.onload = () => {
-          const colorThief = new ColorThief()
-          const color = colorThief.getColor(img)
-          const [r, g, b] = color
-          const backgroundColor = `rgb(${r}, ${g}, ${b})`
-          setColorFondo(backgroundColor)
-
-          // Calcular contraste (luminosidad YIQ)
-          const yiq = (r * 299 + g * 587 + b * 114) / 1000
-          const textColor = yiq >= 150 ? '#000000' : '#ffffff'
-          setColorTexto(textColor)
-        }
-      })
-    }
-  }, [producto.imagen])
-
+const Catalogo = () => {
   return (
-    <div
-      className="producto-card"
-      style={{ backgroundColor: colorFondo, color: colorTexto }}
-    >
-      {producto.imagen ? (
-        <img
-          src={producto.imagen}
-          alt={producto.nombre}
-          style={{
-            width: '100%',
-            maxWidth: '260px',
-            height: 'auto',
-            maxHeight: '180px',
-            objectFit: 'contain',
-            margin: '0 auto 1rem',
-            display: 'block',
-            padding: '6px'
-          }}
-        />
-      ) : (
-        <div className="img-placeholder"><span>Imagen</span></div>
-      )}
-      <h3>{producto.nombre}</h3>
-      <p className="precio-unidad">Por unidad: <strong>{producto.precioUnidad}</strong></p>
-      <p className="precio-mayor">Por mayor (4+): <strong>{producto.precioMayor}</strong></p>
-      <a
-        href={`https://wa.me/56967215364?text=Hola, quiero comprar el producto: ${producto.nombre}`}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <button style={{ backgroundColor: colorTexto === '#ffffff' ? '#ffffff22' : '#222', color: colorTexto }}>
-          🛍️ Agregar al pedido
-        </button>
-      </a>
-    </div>
-  )
-}
-
-function Catalogo() {
-  return (
-    <section id="catalogo" className="catalogo">
-      <h2>Catálogo de Productos</h2>
-      <p className="catalogo-subtitulo">
+    <div className="catalog-container">
+      <h2 className="catalog-title">Catálogo de Productos</h2>
+      <p className="catalog-subtitle">
         🛒 Elige tus productos por unidad o por mayor (desde 4 unidades)
       </p>
-      <div className="catalogo-grid">
-        {productosIniciales.map((producto) => (
-          <ProductoCard key={producto.id} producto={producto} />
+      <div className="product-grid">
+        {productos.map((producto) => (
+          <div key={producto.id} className="card">
+            {producto.imagen ? (
+              <img src={producto.imagen} alt={producto.nombre} />
+            ) : (
+              <div style={{ width: "100%", height: "120px", background: "#ddd", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem" }}>
+                <span>Imagen</span>
+              </div>
+            )}
+            <h3>{producto.nombre}</h3>
+            <p>Por unidad: <strong>${producto.precioUnidad.toLocaleString()}</strong></p>
+            <p>Por mayor (4+): <strong>${producto.precioMayor.toLocaleString()}</strong></p>
+            <button disabled>
+              <FaCartPlus />
+              Agregar al pedido
+            </button>
+          </div>
         ))}
       </div>
-    </section>
-  )
-}
+    </div>
+  );
+};
 
-export default Catalogo
+export default Catalogo;
