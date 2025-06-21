@@ -23,7 +23,7 @@ const productos = [
     precioMayor: '$900',
     imagen: '',
   },
-  // puedes continuar con los otros 7 productos
+  // continúa con los otros productos
 ]
 
 function Catalogo() {
@@ -35,7 +35,20 @@ function Catalogo() {
         {productos.map((producto) => (
           <div className="producto-card" key={producto.id}>
             {producto.imagen ? (
-              <img src={producto.imagen} alt={producto.nombre} className="producto-img" />
+              <img
+                src={producto.imagen}
+                alt={producto.nombre}
+                style={{
+                  width: '100%',
+                  maxWidth: '260px',
+                  height: 'auto',
+                  maxHeight: '180px',
+                  objectFit: 'contain',
+                  margin: '0 auto 1rem',
+                  display: 'block',
+                  padding: '6px'
+                }}
+              />
             ) : (
               <div className="img-placeholder"><span>Imagen</span></div>
             )}
