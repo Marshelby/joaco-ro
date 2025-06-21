@@ -1,91 +1,75 @@
-/* Catalogo.css */
-
-.catalog-container {
-  background-color: #f1faee;
-  padding: 2rem;
+.catalogo-container {
+  padding: 40px 20px;
+  background-color: #f3fdf3;
   text-align: center;
 }
 
-.catalog-title {
-  font-size: 2rem;
-  color: #1d3557;
-  font-weight: bold;
-  margin-bottom: 1rem;
+.catalogo-titulo {
+  font-size: 32px;
+  color: #1b5e20;
+  margin-bottom: 10px;
 }
 
-.catalog-subtitle {
-  font-size: 1rem;
-  color: #457b9d;
-  margin-bottom: 2rem;
+.catalogo-subtitulo {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
 }
 
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
-.card {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  transition: transform 0.2s;
+.tarjeta-producto {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.2s ease;
 }
 
-.card:hover {
+.tarjeta-producto:hover {
   transform: translateY(-5px);
 }
 
-.card img {
-  width: 120px;
-  height: auto;
-  margin: 0 auto 1rem;
+.producto-imagen {
+  max-width: 140px;
+  max-height: 140px;
+  object-fit: contain;
+  margin: 0 auto 16px auto;
   display: block;
 }
 
-/* Fondo especial para el primer producto */
-.card:nth-child(1) {
-  background-color: #e1f5e1;
-}
-
-.card h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #1d1d1d;
-  margin-bottom: 0.5rem;
-}
-
-.card p {
-  margin: 0.2rem 0;
-  color: #444;
-}
-
-.card strong {
-  color: #000;
-}
-
-.card button {
-  margin-top: 1rem;
-  background-color: #e63946;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  width: 100%;
+.imagen-placeholder {
+  width: 140px;
+  height: 140px;
+  background-color: #ddd;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto 16px auto;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #666;
 }
 
-.card button svg {
-  margin-right: 0.5rem;
+.boton-agregar {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #ff6d00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.card button:disabled {
-  background-color: #333;
+.boton-agregar:hover {
+  background-color: #e65100;
 }
