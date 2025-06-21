@@ -1,6 +1,5 @@
 import './Catalogo.css'
 import { useEffect, useState } from 'react'
-import ColorThief from 'color-thief-browser'
 import imgDetergente from '../assets/productos/detergente-matic-3l.png'
 
 const productosIniciales = [
@@ -32,22 +31,24 @@ function ProductoCard({ producto }) {
   const [colorTexto, setColorTexto] = useState('#000000')
 
   useEffect(() => {
-    if (producto.imagen) {
-      const img = new Image()
-      img.crossOrigin = 'Anonymous'
-      img.src = producto.imagen
-      img.onload = () => {
-        const colorThief = new ColorThief()
-        const color = colorThief.getColor(img)
-        const [r, g, b] = color
-        const backgroundColor = `rgb(${r}, ${g}, ${b})`
-        setColorFondo(backgroundColor)
+    if (producto.imagen && typeof window !== 'undefined') {
+      import('color-thief-browser').then(({ default: ColorThief }) => {
+        const img = new Image()
+        img.crossOrigin = 'Anonymous'
+        img.src = producto.imagen
+        img.onload = () => {
+          const colorThief = new ColorThief()
+          const color = colorThief.getColor(img)
+          const [r, g, b] = color
+          const backgroundColor = `rgb(${r}, ${g}, ${b})`
+          setColorFondo(backgroundColor)
 
-        // Luminosidad (YIQ)
-        const yiq = (r * 299 + g * 587 + b * 114) / 1000
-        const textColor = yiq >= 150 ? '#000000' : '#ffffff'
-        setColorTexto(textColor)
-      }
+          // Calcular contraste (luminosidad YIQ)
+          const yiq = (r * 299 + g * 587 + b * 114) / 1000
+          const textColor = yiq >= 150 ? '#000000' : '#ffffff'
+          setColorTexto(textColor)
+        }
+      })
     }
   }, [producto.imagen])
 
