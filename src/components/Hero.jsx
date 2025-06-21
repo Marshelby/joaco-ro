@@ -1,5 +1,5 @@
 import './Hero.css'
-import productosHero from '../assets/hero-productos.png'
+import productosHero from '../assets/productos.png'
 import logoJoacoRo from '../assets/joacoro-logo.png'
 
 function Hero() {
