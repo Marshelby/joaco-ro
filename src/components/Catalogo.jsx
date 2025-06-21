@@ -1,4 +1,5 @@
 import './Catalogo.css'
+import imgDetergente from '../assets/productos/detergente-matic-3l.png'
 
 const productos = [
   {
@@ -6,7 +7,7 @@ const productos = [
     nombre: 'Detergente Matic 3L',
     precioUnidad: '$3.500',
     precioMayor: '$3.200',
-    imagen: '',
+    imagen: imgDetergente,
   },
   {
     id: 2,
@@ -33,9 +34,11 @@ function Catalogo() {
       <div className="catalogo-grid">
         {productos.map((producto) => (
           <div className="producto-card" key={producto.id}>
-            <div className="img-placeholder">
-              <span>Imagen</span>
-            </div>
+            {producto.imagen ? (
+              <img src={producto.imagen} alt={producto.nombre} className="producto-img" />
+            ) : (
+              <div className="img-placeholder"><span>Imagen</span></div>
+            )}
             <h3>{producto.nombre}</h3>
             <p className="precio-unidad">Por unidad: <strong>{producto.precioUnidad}</strong></p>
             <p className="precio-mayor">Por mayor (4+): <strong>{producto.precioMayor}</strong></p>
