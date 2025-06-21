@@ -4,6 +4,12 @@ import productosHero from '../assets/productos.png'
 function Hero() {
   return (
     <section className="hero">
+      <div className="hero-imagen">
+        <img
+          src={productosHero}
+          alt="Productos Joaco Ro"
+        />
+      </div>
       <div className="hero-texto">
         <span className="hero-badge">⭐ Más de 100 clientes felices</span>
         <small className="hero-subtitulo">📦 Stock disponible para retiro inmediato</small>
@@ -25,12 +31,6 @@ function Hero() {
           </button>
         </a>
         <p className="hero-info-extra">📍 Estamos en Quilpué – atención personalizada</p>
-      </div>
-      <div className="hero-imagen">
-        <img
-          src={productosHero}
-          alt="Productos Joaco Ro"
-        />
       </div>
     </section>
   )
