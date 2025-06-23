@@ -18,9 +18,11 @@
 
 .catalogo-subtitulo {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #155e4b;
   margin-bottom: 2rem;
-  color: #333;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
 }
 
 .productos-grid {
