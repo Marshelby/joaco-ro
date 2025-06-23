@@ -9,21 +9,21 @@ const productos = [
     precioUnidad: "$3.500",
     precioMayor: "$3.200",
     imagen: detergenteImage,
-    fondo: "#e6f9ec"
+    fondo: "#edf4ff" // azul claro elegante
   },
   {
     nombre: "Cloro Gel 1L",
     precioUnidad: "$1.200",
     precioMayor: "$1.000",
     imagen: null,
-    fondo: "#ffffff"
+    fondo: "#edf4ff"
   },
   {
     nombre: "Aromatizante Lavanda",
     precioUnidad: "$1.000",
     precioMayor: "$900",
     imagen: null,
-    fondo: "#ffffff"
+    fondo: "#edf4ff"
   },
 ];
 
