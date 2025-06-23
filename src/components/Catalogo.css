@@ -1,102 +1,95 @@
 .catalogo-container {
-  padding: 1.5rem 1rem;
-  background-image: url('../assets/degradado_joacoro.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #e0f2e9, #d7f2dc);
+  text-align: center;
 }
 
-.titulo-imagen {
-  width: 100%;
-  max-width: 850px;
-  height: auto;
-  display: block;
-  margin: 0 auto 0.3rem auto;
+.catalogo-titulo {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #39685f;
+  font-family: 'Georgia', serif;
 }
 
 .catalogo-subtitulo {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #155e4b;
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
+  font-size: 1.2rem;
+  color: #1a4e45;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;
 }
 
 .productos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 
-.tarjeta-producto {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  padding: 1rem;
+.producto-card {
+  background-color: #edf4ff; /* Fondo azul elegante */
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
 }
 
-.tarjeta-producto:hover {
-  transform: translateY(-4px);
+.producto-card:hover {
+  transform: translateY(-6px);
 }
 
 .producto-imagen {
-  width: auto;
-  height: 200px;
+  height: 230px;
   object-fit: contain;
-  margin-bottom: 1rem;
-}
-
-.imagen-placeholder {
-  height: 200px;
-  background-color: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #999;
-  font-style: italic;
-  border-radius: 6px;
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease;
 }
 
 .producto-nombre {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #1c1c1c;
-  margin: 0.5rem 0;
+  margin-bottom: 10px;
+  color: #1a1a1a;
 }
 
 .producto-precio {
-  margin: 0.25rem 0;
-  font-size: 1rem;
-  font-weight: 500;
+  margin: 4px 0;
+  font-size: 0.95rem;
   color: #333;
 }
 
-.producto-precio strong {
-  color: #388e3c; /* Verde profesional */
+.precio-unidad {
+  color: #2a9432;
+  font-weight: bold;
 }
 
-.producto-precio:last-of-type strong {
-  color: #1976d2; /* Azul profesional */
+.precio-mayor {
+  color: #2065d1;
+  font-weight: bold;
 }
 
 .boton-agregar {
-  background-color: #4CAF50;
+  background-color: #49a349;
   color: white;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 10px 18px;
   border-radius: 6px;
+  margin-top: 16px;
   cursor: pointer;
-  margin-top: 0.8rem;
-  transition: background-color 0.3s ease;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
 }
 
 .boton-agregar:hover {
-  background-color: #45a049;
+  background-color: #3f9143;
 }
