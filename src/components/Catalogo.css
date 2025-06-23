@@ -1,100 +1,75 @@
-.catalogo-container {
-  padding: 60px 20px;
-  background: linear-gradient(to bottom, #e0f2e9, #d7f2dc);
-  text-align: center;
-}
-
-.catalogo-titulo {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #39685f;
-  font-family: 'Georgia', serif;
-}
-
-.catalogo-subtitulo {
-  font-size: 1.2rem;
-  color: #1a4e45;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-weight: 500;
-}
-
-.productos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-
-.producto-card {
-  background-color: #edf4ff; /* Azul elegante */
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.producto {
   width: 260px;
+  height: 440px;
+  background-color: #edf4ff;
   padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 440px;
-  transition: transform 0.3s ease;
   text-align: center;
+  transition: transform 0.3s;
 }
 
-.producto-card:hover {
-  transform: translateY(-6px);
+.producto:hover {
+  transform: translateY(-5px);
 }
 
 .producto-imagen {
-  height: 230px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.producto-imagen img {
+  max-height: 180px;
+  max-width: 100%;
   object-fit: contain;
-  margin-bottom: 12px;
-  transition: transform 0.2s ease;
 }
 
-.producto-nombre {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #1a1a1a;
+.producto h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  font-weight: bold;
 }
 
-.producto-precio {
+.producto p {
   margin: 4px 0;
-  font-size: 0.95rem;
-  color: #333;
+  font-size: 14px;
+}
+
+.producto p span {
+  font-weight: bold;
 }
 
 .precio-unidad {
-  color: #2a9432;
-  font-weight: bold;
+  color: #228B22;
 }
 
 .precio-mayor {
-  color: #2065d1;
+  color: #1E90FF;
+}
+
+.boton-pedido {
+  margin-top: auto;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
   font-weight: bold;
 }
 
-.boton-agregar {
-  background-color: #49a349;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  margin-top: 16px;
-  cursor: pointer;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  margin-top: auto;
-}
-
-.boton-agregar:hover {
-  background-color: #3f9143;
+.boton-pedido:hover {
+  background-color: #388e3c;
 }
