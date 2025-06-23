@@ -5,7 +5,7 @@
 }
 
 .catalogo-titulo {
-  font-size: 48px;
+  font-size: 32px; /* ← REDUCIDO desde 48px */
   font-family: 'Georgia', serif;
   color: #3e7265;
   margin-bottom: 20px;
@@ -20,7 +20,7 @@
 
 .tarjetas-producto {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
