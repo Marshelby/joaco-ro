@@ -6,6 +6,7 @@ import tituloCatalogo from "../assets/titulos/catalogo_1200x200.png";
 import detergenteImg from "../assets/productos/detergente_matic_sin_fondo.png";
 import cloroGelImg from "../assets/productos/clorogel.png";
 import cloroLavandaImg from "../assets/productos/cloro.png";
+import lavalozasImg from "../assets/productos/lavalozas.png";
 
 const productos = [
   {
@@ -25,6 +26,12 @@ const productos = [
     precioUnidad: "$1.300",
     precioMayor: "$1.100",
     imagen: cloroLavandaImg,
+  },
+  {
+    nombre: "Lavalozas Amarillo 1L",
+    precioUnidad: "$1.200",
+    precioMayor: "$1.000",
+    imagen: lavalozasImg,
   },
   {
     nombre: "Aromatizante Lavanda",
