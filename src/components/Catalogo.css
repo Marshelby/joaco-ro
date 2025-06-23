@@ -10,7 +10,7 @@
 
 .titulo-imagen {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1200px; /* Nuevo ancho máximo */
   height: auto;
   display: block;
   margin: 0 auto 1rem auto;
