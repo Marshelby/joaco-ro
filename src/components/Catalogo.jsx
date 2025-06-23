@@ -58,7 +58,7 @@ const Catalogo = () => {
         className="catalogo-titulo-img"
       />
       <p className="subtitulo">
-        🛒 Elige tus productos por unidad o por mayor (desde 4 unidades)
+        🌟 Explora nuestro catálogo: compra por unidad o aprovecha precios especiales por mayor (desde 4 unidades).
       </p>
       <div className="productos-grid">
         {productos.map((producto, index) => (

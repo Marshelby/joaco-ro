@@ -12,9 +12,14 @@
 }
 
 .subtitulo {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: #03543f;
+  font-size: 1.25rem;
+  margin-bottom: 35px;
+  color: #05564b;
+  font-weight: 500;
+  background-color: #d4f0e1;
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .productos-grid {
@@ -29,13 +34,13 @@
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 220px; /* Se ajusta para que quepan 4 en fila */
+  width: 220px;
   max-width: 100%;
   text-align: center;
 }
 
 .producto-imagen {
-  width: 187px; /* REDUCCIÓN DEL 15% respecto a 220px */
+  width: 187px;
   height: auto;
   object-fit: contain;
   margin-bottom: 15px;
