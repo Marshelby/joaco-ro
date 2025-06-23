@@ -1,58 +1,45 @@
 .catalogo-container {
-  background: linear-gradient(to bottom, #e2f3e5, #d3f2df);
-  padding: 40px 0;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #d7f5e8, #ecf7ea);
+  text-align: center;
 }
 
 .catalogo-titulo {
   font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
-  color: #356554;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Georgia', serif;
+  color: #3e7265;
+  margin-bottom: 20px;
 }
 
 .catalogo-subtitulo {
   font-size: 18px;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #005b40;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  color: #075e54;
+  margin-bottom: 30px;
+  font-weight: 500;
 }
 
-.catalogo-grid {
+.tarjetas-producto {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   justify-content: center;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 32px;
 }
 
-.tarjeta-producto {
+.tarjeta {
   background-color: #edf4ff;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-radius: 12px;
+  padding: 24px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  flex-shrink: 0;
 }
 
-.tarjeta-producto:hover {
-  transform: translateY(-5px);
+.tarjeta:hover {
+  transform: translateY(-4px);
 }
 
 .imagen-producto {
-  width: 180px;
+  width: 160px;
   height: auto;
   object-fit: contain;
   margin: 0 auto 16px;
@@ -62,37 +49,30 @@
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #222;
 }
 
-.precio-producto {
+.precio {
+  margin: 4px 0;
   font-size: 16px;
-  margin-bottom: 4px;
-  color: #333;
 }
 
-.precio-unidad {
-  color: #1a8f3a;
-  font-weight: bold;
-}
-
-.precio-mayor {
-  color: #2155cd;
+.precio span {
   font-weight: bold;
 }
 
 .boton-agregar {
-  margin-top: 12px;
-  padding: 10px 16px;
-  background-color: #4caf50;
+  background-color: #2e7d32;
   color: white;
   border: none;
+  padding: 10px 16px;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s;
+  margin-top: 12px;
+  width: 100%;
+  transition: background-color 0.3s;
 }
 
 .boton-agregar:hover {
-  background-color: #3e8e41;
+  background-color: #1b5e20;
 }
