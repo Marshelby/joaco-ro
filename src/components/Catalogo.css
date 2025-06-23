@@ -19,17 +19,17 @@
 }
 
 .tarjetas-producto {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .tarjeta {
   background-color: #edf4ff;
   border-radius: 12px;
   padding: 24px;
-  width: 260px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
@@ -39,10 +39,10 @@
 }
 
 .imagen-producto {
-  width: 160px;
-  height: auto;
+  width: 100%;
+  max-height: 200px;
   object-fit: contain;
-  margin: 0 auto 16px;
+  margin-bottom: 16px;
 }
 
 .nombre-producto {
@@ -54,9 +54,7 @@
 .precio {
   margin: 4px 0;
   font-size: 16px;
-}
-
-.precio span {
+  color: red;
   font-weight: bold;
 }
 
