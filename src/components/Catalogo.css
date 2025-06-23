@@ -1,48 +1,46 @@
 .catalogo-container {
-  padding: 40px 20px;
-  background: linear-gradient(to bottom, #d7f5e8, #ecf7ea);
+  background: linear-gradient(to bottom, #e0f7e9, #fffde7);
+  padding: 60px 20px;
   text-align: center;
 }
 
-.titulo-imagen {
-  max-width: 840px; /* ← 30% menos de ancho que antes */
-  width: 100%;
-  margin: 0 auto 20px;
+.titulo-seccion {
+  max-width: 100%;
+  height: auto;
+  width: 70%; /* reducción del 30% como solicitaste */
+  margin: 0 auto 30px;
   display: block;
 }
 
-.catalogo-titulo {
-  font-size: 32px;
-  font-family: 'Georgia', serif;
-  color: #3e7265;
-  margin-bottom: 20px;
-}
-
-.catalogo-subtitulo {
+.subtitulo {
   font-size: 18px;
-  color: #075e54;
-  margin-bottom: 30px;
-  font-weight: 500;
+  color: #226a54;
+  font-weight: 600;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
-.tarjetas-producto {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
+.catalogo-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
 }
 
-.tarjeta {
-  background-color: #edf4ff;
+.tarjeta-producto {
+  background-color: #eef4ff;
   border-radius: 12px;
   padding: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
 
-.tarjeta:hover {
-  transform: translateY(-4px);
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
 }
 
 .imagen-producto {
@@ -52,29 +50,34 @@
   margin-bottom: 16px;
 }
 
+/* Solo para detergente matic */
+.imagen-detergente {
+  max-height: 240px;
+}
+
 .nombre-producto {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: 10px;
+  color: #222;
 }
 
 .precio {
-  margin: 4px 0;
   font-size: 16px;
-  color: red;
+  margin: 4px 0;
+  color: #d82c2c;
   font-weight: bold;
 }
 
 .boton-agregar {
+  margin-top: 16px;
   background-color: #2e7d32;
   color: white;
-  border: none;
   padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
-  margin-top: 12px;
-  width: 100%;
   transition: background-color 0.3s;
 }
 
