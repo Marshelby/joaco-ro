@@ -64,14 +64,25 @@
 }
 
 .producto-nombre {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1c1c1c;
   margin: 0.5rem 0;
 }
 
 .producto-precio {
   margin: 0.25rem 0;
   font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.producto-precio strong {
+  color: #388e3c; /* Verde profesional */
+}
+
+.producto-precio:last-of-type strong {
+  color: #1976d2; /* Azul profesional */
 }
 
 .boton-agregar {
@@ -83,6 +94,7 @@
   cursor: pointer;
   margin-top: 0.8rem;
   transition: background-color 0.3s ease;
+  font-weight: 600;
 }
 
 .boton-agregar:hover {
