@@ -28,6 +28,9 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .tarjeta-producto {
@@ -41,6 +44,7 @@
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s;
+  flex-shrink: 0;
 }
 
 .tarjeta-producto:hover {
