@@ -1,7 +1,7 @@
 import React from "react";
 import "./Catalogo.css";
-import detergenteImage from "../assets/productos/detergente_matic_sin_fondo.png"; // ✅ Imagen sin fondo
-import tituloCatalogo from "../assets/titulos/catalogo_1200x200.png"; // ✅ Imagen redimensionada
+import detergenteImage from "../assets/productos/detergente_matic_sin_fondo.png";
+import tituloCatalogo from "../assets/titulos/catalogo_1200x200.png";
 
 const productos = [
   {
@@ -9,7 +9,7 @@ const productos = [
     precioUnidad: "$3.500",
     precioMayor: "$3.200",
     imagen: detergenteImage,
-    fondo: "#edf4ff" // azul claro elegante
+    fondo: "#edf4ff"
   },
   {
     nombre: "Cloro Gel 1L",
@@ -34,25 +34,26 @@ function Catalogo() {
       <p className="catalogo-subtitulo">
         🛒 Elige tus productos por unidad o por mayor (desde 4 unidades)
       </p>
-      <div className="productos-grid">
+
+      <div className="tarjetas-producto">
         {productos.map((producto, index) => (
           <div
             key={index}
-            className="tarjeta-producto"
+            className="tarjeta"
             style={{ backgroundColor: producto.fondo }}
           >
             {producto.imagen ? (
               <img
                 src={producto.imagen}
                 alt={producto.nombre}
-                className="producto-imagen"
+                className="imagen-producto"
               />
             ) : (
               <div className="imagen-placeholder">Imagen</div>
             )}
-            <h3 className="producto-nombre">{producto.nombre}</h3>
-            <p className="producto-precio">Por unidad: <strong>{producto.precioUnidad}</strong></p>
-            <p className="producto-precio">Por mayor (4+): <strong>{producto.precioMayor}</strong></p>
+            <h3 className="nombre-producto">{producto.nombre}</h3>
+            <p className="precio">Por unidad: <span className="precio-unidad">{producto.precioUnidad}</span></p>
+            <p className="precio">Por mayor (4+): <span className="precio-mayor">{producto.precioMayor}</span></p>
             <button className="boton-agregar">🧺 Agregar al pedido</button>
           </div>
         ))}
