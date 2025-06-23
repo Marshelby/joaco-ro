@@ -1,9 +1,10 @@
 import React from "react";
 import "./Catalogo.css";
 
-// Solo se importa la imagen confirmada
+// Imágenes confirmadas
 import tituloCatalogo from "../assets/titulos/catalogo_1200x200.png";
 import detergenteImg from "../assets/productos/detergente_matic_sin_fondo.png";
+import cloroGelImg from "../assets/productos/clorogel.png";
 
 const productos = [
   {
@@ -16,6 +17,7 @@ const productos = [
     nombre: "Cloro Gel 1L",
     precioUnidad: "$1.200",
     precioMayor: "$1.000",
+    imagen: cloroGelImg,
   },
   {
     nombre: "Aromatizante Lavanda",
