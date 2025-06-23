@@ -1,7 +1,7 @@
 import React from "react";
 import "./Catalogo.css";
 
-// Solo se importa la imagen del título y del detergente, como pediste
+// Solo se importa la imagen confirmada
 import tituloCatalogo from "../assets/titulos/catalogo_1200x200.png";
 import detergenteImg from "../assets/productos/detergente_matic_sin_fondo.png";
 
@@ -26,6 +26,26 @@ const productos = [
     nombre: "Desinfectante Floral",
     precioUnidad: "$1.300",
     precioMayor: "$1.100",
+  },
+  {
+    nombre: "Limpia Pisos Lavanda",
+    precioUnidad: "$1.500",
+    precioMayor: "$1.300",
+  },
+  {
+    nombre: "Limpia Vidrios 1L",
+    precioUnidad: "$1.000",
+    precioMayor: "$850",
+  },
+  {
+    nombre: "Desengrasante Cocina",
+    precioUnidad: "$1.600",
+    precioMayor: "$1.400",
+  },
+  {
+    nombre: "Jabón Líquido 1L",
+    precioUnidad: "$1.400",
+    precioMayor: "$1.200",
   }
 ];
 
