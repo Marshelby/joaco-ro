@@ -26,7 +26,7 @@ const Catalogo = () => {
   return (
     <div className="catalogo-container">
       <img
-        src="/assets/productos/catalogofinal.png"
+        src="/assets/titulos/catalogo_1200x200.png"
         alt="Catálogo de productos"
         className="catalogo-titulo-img"
       />
