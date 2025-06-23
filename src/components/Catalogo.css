@@ -4,8 +4,15 @@
   text-align: center;
 }
 
+.titulo-imagen {
+  max-width: 840px; /* ← 30% menos de ancho que antes */
+  width: 100%;
+  margin: 0 auto 20px;
+  display: block;
+}
+
 .catalogo-titulo {
-  font-size: 32px; /* ← REDUCIDO desde 48px */
+  font-size: 32px;
   font-family: 'Georgia', serif;
   color: #3e7265;
   margin-bottom: 20px;
