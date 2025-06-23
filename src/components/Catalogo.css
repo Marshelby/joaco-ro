@@ -29,13 +29,13 @@
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 240px;
+  width: 220px; /* Se ajusta para que quepan 4 en fila */
   max-width: 100%;
   text-align: center;
 }
 
 .producto-imagen {
-  width: 220px;
+  width: 187px; /* REDUCCIÓN DEL 15% respecto a 220px */
   height: auto;
   object-fit: contain;
   margin-bottom: 15px;
