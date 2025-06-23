@@ -31,13 +31,17 @@
 }
 
 .producto-card {
-  background-color: #edf4ff; /* Fondo azul elegante */
+  background-color: #edf4ff; /* Azul elegante */
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 260px;
   padding: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 440px;
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .producto-card:hover {
@@ -88,6 +92,7 @@
   justify-content: center;
   gap: 8px;
   width: 100%;
+  margin-top: auto;
 }
 
 .boton-agregar:hover {
