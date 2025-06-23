@@ -6,24 +6,32 @@ function ComoComprar() {
       <h2>¿Cómo comprar?</h2>
       <div className="pasos-container">
         <div className="paso">
-          <span>1️⃣</span>
-          <h3>Elige tus productos</h3>
-          <p>Revisa el catálogo o destacados y selecciona lo que necesitas.</p>
+          <div className="numero">1</div>
+          <div className="contenido">
+            <h3>Revisa el catálogo</h3>
+            <p>Explora los productos destacados y elige lo que necesites.</p>
+          </div>
         </div>
         <div className="paso">
-          <span>2️⃣</span>
-          <h3>Haz tu pedido por WhatsApp</h3>
-          <p>Escríbenos directamente con los productos seleccionados.</p>
+          <div className="numero">2</div>
+          <div className="contenido">
+            <h3>Haz tu pedido por WhatsApp</h3>
+            <p>Contáctanos directamente y confirma tu pedido fácilmente.</p>
+          </div>
         </div>
         <div className="paso">
-          <span>3️⃣</span>
-          <h3>Retira en local</h3>
-          <p>Nos encontramos en Quilpué. Solo retiro en tienda física.</p>
+          <div className="numero">3</div>
+          <div className="contenido">
+            <h3>Retira en tienda</h3>
+            <p>Nuestro punto de retiro está ubicado en Quilpué.</p>
+          </div>
         </div>
         <div className="paso">
-          <span>4️⃣</span>
-          <h3>Paga en el momento</h3>
-          <p>Aceptamos efectivo o transferencia al momento del retiro.</p>
+          <div className="numero">4</div>
+          <div className="contenido">
+            <h3>Paga al momento</h3>
+            <p>Aceptamos efectivo o transferencia al retirar.</p>
+          </div>
         </div>
       </div>
     </section>
