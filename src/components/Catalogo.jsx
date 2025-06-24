@@ -67,26 +67,6 @@ const productos = [
     precioUnidad: "$4.800",
     precioMayor: "$4.500",
     imagen: detergente5LImg,
-  },
-  {
-    nombre: "Aromatizante Lavanda",
-    precioUnidad: "$1.000",
-    precioMayor: "$900",
-  },
-  {
-    nombre: "Desinfectante Floral",
-    precioUnidad: "$1.300",
-    precioMayor: "$1.100",
-  },
-  {
-    nombre: "Limpia Pisos Lavanda",
-    precioUnidad: "$1.500",
-    precioMayor: "$1.300",
-  },
-  {
-    nombre: "Jabón Líquido 1L",
-    precioUnidad: "$1.400",
-    precioMayor: "$1.200",
   }
 ];
 
