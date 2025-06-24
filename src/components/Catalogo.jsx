@@ -7,11 +7,11 @@ import detergenteImg from "../assets/productos/detergente_matic_sin_fondo.png";
 import cloroGelImg from "../assets/productos/clorogel.png";
 import cloroLavandaImg from "../assets/productos/cloro.png";
 import lavalozasImg from "../assets/productos/lavalozas.png";
-import suavizanteImg from "../assets/productos/suave.png";
+import suavizanteImg from "../assets/productos/suavefinal.png"; // ✅ corregido
 import desengrasanteImg from "../assets/productos/desengrasante.png";
 import limpiaVidriosImg from "../assets/productos/limpia.png";
 import escobaImg from "../assets/productos/escoba.png";
-import detergente5LImg from "../assets/productos/matic.png"; // 🆕
+import detergente5LImg from "../assets/productos/matic.png";
 
 const productos = [
   {
@@ -63,7 +63,7 @@ const productos = [
     imagen: escobaImg,
   },
   {
-    nombre: "Detergente Matic 5L", // 🆕
+    nombre: "Detergente Matic 5L",
     precioUnidad: "$4.800",
     precioMayor: "$4.500",
     imagen: detergente5LImg,
