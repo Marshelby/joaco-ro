@@ -9,7 +9,8 @@ import cloroLavandaImg from "../assets/productos/cloro.png";
 import lavalozasImg from "../assets/productos/lavalozas.png";
 import suavizanteImg from "../assets/productos/suave.png";
 import desengrasanteImg from "../assets/productos/desengrasante.png";
-import limpiaVidriosImg from "../assets/productos/limpia.png"; // 🆕
+import limpiaVidriosImg from "../assets/productos/limpia.png";
+import escobaImg from "../assets/productos/escoba.png"; // 🆕
 
 const productos = [
   {
@@ -49,10 +50,16 @@ const productos = [
     imagen: desengrasanteImg,
   },
   {
-    nombre: "Limpia Vidrios 500ml", // 🆕
+    nombre: "Limpia Vidrios 500ml",
     precioUnidad: "$1.000",
     precioMayor: "$850",
     imagen: limpiaVidriosImg,
+  },
+  {
+    nombre: "Escoba de madera",
+    precioUnidad: "$2.500",
+    precioMayor: "$2.200",
+    imagen: escobaImg,
   },
   {
     nombre: "Aromatizante Lavanda",
