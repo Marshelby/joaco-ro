@@ -7,7 +7,7 @@ import detergenteImg from "../assets/productos/detergente_matic_sin_fondo.png";
 import cloroGelImg from "../assets/productos/clorogel.png";
 import cloroLavandaImg from "../assets/productos/cloro.png";
 import lavalozasImg from "../assets/productos/lavalozas.png";
-import suavizanteImg from "../assets/productos/suavefinal.png"; // ✅ corregido
+import suavizanteImg from "../assets/productos/suavefinal.png";
 import desengrasanteImg from "../assets/productos/desengrasante.png";
 import limpiaVidriosImg from "../assets/productos/limpia.png";
 import escobaImg from "../assets/productos/escoba.png";
@@ -108,7 +108,7 @@ const Catalogo = () => {
               <img
                 src={producto.imagen}
                 alt={producto.nombre}
-                className="producto-imagen"
+                className={`producto-imagen ${producto.nombre.includes("Suavizante") ? "suavizante-ajustada" : ""}`}
               />
             )}
             <h3>{producto.nombre}</h3>
