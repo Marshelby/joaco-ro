@@ -7,6 +7,7 @@ import detergenteImg from "../assets/productos/detergente_matic_sin_fondo.png";
 import cloroGelImg from "../assets/productos/clorogel.png";
 import cloroLavandaImg from "../assets/productos/cloro.png";
 import lavalozasImg from "../assets/productos/lavalozas.png";
+import suavizanteImg from "../assets/productos/suave.png"; // 🆕
 
 const productos = [
   {
@@ -32,6 +33,12 @@ const productos = [
     precioUnidad: "$1.200",
     precioMayor: "$1.000",
     imagen: lavalozasImg,
+  },
+  {
+    nombre: "Suavizante Suave 1L", // 🆕
+    precioUnidad: "$1.300",
+    precioMayor: "$1.100",
+    imagen: suavizanteImg,
   },
   {
     nombre: "Aromatizante Lavanda",
