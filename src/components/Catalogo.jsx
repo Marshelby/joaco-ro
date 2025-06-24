@@ -10,7 +10,8 @@ import lavalozasImg from "../assets/productos/lavalozas.png";
 import suavizanteImg from "../assets/productos/suave.png";
 import desengrasanteImg from "../assets/productos/desengrasante.png";
 import limpiaVidriosImg from "../assets/productos/limpia.png";
-import escobaImg from "../assets/productos/escoba.png"; // 🆕
+import escobaImg from "../assets/productos/escoba.png";
+import detergente5LImg from "../assets/productos/matic.png"; // 🆕
 
 const productos = [
   {
@@ -60,6 +61,12 @@ const productos = [
     precioUnidad: "$2.500",
     precioMayor: "$2.200",
     imagen: escobaImg,
+  },
+  {
+    nombre: "Detergente Matic 5L", // 🆕
+    precioUnidad: "$4.800",
+    precioMayor: "$4.500",
+    imagen: detergente5LImg,
   },
   {
     nombre: "Aromatizante Lavanda",
