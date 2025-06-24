@@ -46,12 +46,12 @@
   margin-bottom: 15px;
 }
 
-/* ✅ Solo para el Suavizante Suave */
+/* ✅ Ajuste SOLO para Suavizante Suave */
 .producto-imagen.suavizante-ajustada {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  margin-bottom: 15px;
+  width: 120px !important;
+  height: 120px !important;
+  object-fit: contain !important;
+  margin-bottom: 15px !important;
 }
 
 .precio-rojo {
