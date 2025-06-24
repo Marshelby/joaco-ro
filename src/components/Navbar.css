@@ -14,6 +14,14 @@
   margin: 0;
   color: #0d47a1;
 }
+.navbar-logo span {
+  color: #1976d2;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
 
 .navbar-links {
   list-style: none;
@@ -32,4 +40,31 @@
 
 .navbar-links li a:hover {
   color: #00796b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #fff;
+    display: none;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0.5rem 0;
+  }
 }
