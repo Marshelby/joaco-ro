@@ -7,7 +7,8 @@ import detergenteImg from "../assets/productos/detergente_matic_sin_fondo.png";
 import cloroGelImg from "../assets/productos/clorogel.png";
 import cloroLavandaImg from "../assets/productos/cloro.png";
 import lavalozasImg from "../assets/productos/lavalozas.png";
-import suavizanteImg from "../assets/productos/suave.png"; // 🆕
+import suavizanteImg from "../assets/productos/suave.png";
+import desengrasanteImg from "../assets/productos/desengrasante.png"; // 🆕
 
 const productos = [
   {
@@ -35,10 +36,16 @@ const productos = [
     imagen: lavalozasImg,
   },
   {
-    nombre: "Suavizante Suave 1L", // 🆕
+    nombre: "Suavizante Suave 1L",
     precioUnidad: "$1.300",
     precioMayor: "$1.100",
     imagen: suavizanteImg,
+  },
+  {
+    nombre: "Desengrasante Cocina",
+    precioUnidad: "$1.600",
+    precioMayor: "$1.400",
+    imagen: desengrasanteImg,
   },
   {
     nombre: "Aromatizante Lavanda",
@@ -59,11 +66,6 @@ const productos = [
     nombre: "Limpia Vidrios 1L",
     precioUnidad: "$1.000",
     precioMayor: "$850",
-  },
-  {
-    nombre: "Desengrasante Cocina",
-    precioUnidad: "$1.600",
-    precioMayor: "$1.400",
   },
   {
     nombre: "Jabón Líquido 1L",
