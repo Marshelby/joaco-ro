@@ -8,7 +8,8 @@ import cloroGelImg from "../assets/productos/clorogel.png";
 import cloroLavandaImg from "../assets/productos/cloro.png";
 import lavalozasImg from "../assets/productos/lavalozas.png";
 import suavizanteImg from "../assets/productos/suave.png";
-import desengrasanteImg from "../assets/productos/desengrasante.png"; // 🆕
+import desengrasanteImg from "../assets/productos/desengrasante.png";
+import limpiaVidriosImg from "../assets/productos/limpia.png"; // 🆕
 
 const productos = [
   {
@@ -48,6 +49,12 @@ const productos = [
     imagen: desengrasanteImg,
   },
   {
+    nombre: "Limpia Vidrios 500ml", // 🆕
+    precioUnidad: "$1.000",
+    precioMayor: "$850",
+    imagen: limpiaVidriosImg,
+  },
+  {
     nombre: "Aromatizante Lavanda",
     precioUnidad: "$1.000",
     precioMayor: "$900",
@@ -61,11 +68,6 @@ const productos = [
     nombre: "Limpia Pisos Lavanda",
     precioUnidad: "$1.500",
     precioMayor: "$1.300",
-  },
-  {
-    nombre: "Limpia Vidrios 1L",
-    precioUnidad: "$1.000",
-    precioMayor: "$850",
   },
   {
     nombre: "Jabón Líquido 1L",
