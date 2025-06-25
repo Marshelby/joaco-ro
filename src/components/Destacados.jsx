@@ -20,7 +20,7 @@ const destacados = [
 function Destacados() {
   return (
     <section id="destacados" className="destacados">
-      <h2>Productos Destacados</h2>
+      <h2>Promociones y Packs</h2>
       <div className="destacados-grid">
         {destacados.map((item) => (
           <div className="destacado-card" key={item.id}>
