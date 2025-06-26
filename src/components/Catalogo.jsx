@@ -16,8 +16,8 @@ import detergente5LImg from "../assets/productos/matic.png";
 const productos = [
   {
     nombre: "Detergente Matic 3L",
-    precioUnidad: "$3.500",
-    precioMayor: "$3.200",
+    precioUnidad: "$3.000",
+    precioMayor: "$2.500",
     imagen: detergenteImg,
   },
   {
@@ -28,32 +28,32 @@ const productos = [
   },
   {
     nombre: "Cloro Gel Lavanda 1L",
-    precioUnidad: "$1.300",
-    precioMayor: "$1.100",
+    precioUnidad: "$1.200",
+    precioMayor: "$1.000",
     imagen: cloroLavandaImg,
   },
   {
     nombre: "Lavalozas Amarillo 1L",
-    precioUnidad: "$1.200",
-    precioMayor: "$1.000",
+    precioUnidad: "$2.800",
+    precioMayor: "$2.000",
     imagen: lavalozasImg,
   },
   {
     nombre: "Suavizante Suave 1L",
-    precioUnidad: "$1.300",
-    precioMayor: "$1.100",
+    precioUnidad: "$2.000",
+    precioMayor: "$2.000",
     imagen: suavizanteImg,
   },
   {
     nombre: "Desengrasante Cocina",
-    precioUnidad: "$1.600",
-    precioMayor: "$1.400",
+    precioUnidad: "$1.200",
+    precioMayor: "$1.000",
     imagen: desengrasanteImg,
   },
   {
     nombre: "Limpia Vidrios 500ml",
-    precioUnidad: "$1.000",
-    precioMayor: "$850",
+    precioUnidad: "$1.200",
+    precioMayor: "$1.000",
     imagen: limpiaVidriosImg,
   },
   {
@@ -64,9 +64,21 @@ const productos = [
   },
   {
     nombre: "Detergente Matic 5L",
-    precioUnidad: "$4.800",
-    precioMayor: "$4.500",
+    precioUnidad: "$11.000",
+    precioMayor: "$11.000",
     imagen: detergente5LImg,
+  },
+  {
+    nombre: "Shampoo Frozen",
+    precioUnidad: "$2.000",
+    precioMayor: "$1.800",
+    imagen: null,
+  },
+  {
+    nombre: "Saco Sarro",
+    precioUnidad: "$2.000",
+    precioMayor: "$1.700",
+    imagen: null,
   }
 ];
 
