@@ -10,6 +10,7 @@
   --gold:#ffeb3b;
 }
 
+/* ===== Contenedor general del Hero ===== */
 .hero{
   position: relative;
   font-family: 'Poppins', sans-serif;
@@ -46,7 +47,7 @@
   gap: clamp(1.5rem, 3vw, 3rem);
 }
 
-/* Columna izquierda (texto) */
+/* ===== Columna izquierda (texto) ===== */
 .hero-content{
   animation: fadeInUp .8s ease both;
 }
@@ -114,66 +115,118 @@
   color:#42566d;
 }
 
-/* Columna derecha (visual) */
+/* ===== Columna derecha (mockup premium) ===== */
 .hero-visual{
   display:flex;
   justify-content:center;
+  align-items:center;
+  perspective: 1200px; /* para el tilt */
 }
 
-.hero-card{
-  position:relative;
-  width:min(520px, 90%);
+/* Contenedor tipo escena con profundidad */
+.hero-scene{
+  position: relative;
+  width: min(540px, 92%);
   aspect-ratio: 4/3;
-  border-radius: 22px;
-  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  border-radius: 24px;
+  background:
+    radial-gradient(120% 100% at 80% 0%, rgba(13,71,161,.12), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
   box-shadow:
-    0 10px 30px rgba(0,0,0,.06),
-    0 30px 80px rgba(13,71,161,.12);
-  display:grid;
-  place-items:center;
-  padding: clamp(1rem, 2vw, 1.6rem);
-  animation: floatUp 1.2s ease .1s both;
+    0 10px 24px rgba(0,0,0,.06),
+    0 40px 100px rgba(13,71,161,.16);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform .5s ease, box-shadow .4s ease;
+}
+.hero-scene:hover{
+  transform: rotateX(3deg) rotateY(-3deg);
+  box-shadow:
+    0 14px 28px rgba(0,0,0,.07),
+    0 60px 130px rgba(13,71,161,.22);
 }
 
-.hero-glow{
+/* Luz superior suave */
+.hero-light{
   position:absolute;
-  inset:auto 10% 8% 10%;
-  height: 20%;
-  border-radius: 50%;
-  filter: blur(28px);
-  background: radial-gradient(closest-side, rgba(21,101,192,.22), transparent 65%);
+  inset: -10% -10% 55% -10%;
+  background: radial-gradient(80% 70% at 50% 0%, rgba(21,101,192,.18), transparent 70%);
+  filter: blur(22px);
+  pointer-events:none;
 }
 
-.hero-image{
-  width: 100%;
-  max-width: 440px;
-  height: auto;
+/* Estante de vidrio */
+.hero-shelf{
+  position:absolute;
+  left:6%;
+  right:6%;
+  bottom:18%;
+  height: 16%;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,.55), rgba(240,248,255,.35));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.7),
+    0 18px 40px rgba(0,0,0,.08);
+  backdrop-filter: blur(3px) saturate(1.1);
+}
+.hero-shelf-glow{
+  position:absolute;
+  inset: 10% 12%;
+  border-radius: 12px;
+  background: radial-gradient(closest-side, rgba(21,101,192,.20), transparent 65%);
+  filter: blur(16px);
+}
+.hero-shelf-edge{
+  position:absolute;
+  left:0; right:0; bottom:-6px; height:6px;
+  border-radius: 0 0 16px 16px;
+  background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,0));
+}
+
+/* Productos centrados */
+.hero-products{
+  position:absolute;
+  left:50%;
+  bottom:22%;
+  transform: translateX(-50%);
+  width: min(86%, 460px);
+  height:auto;
   object-fit: contain;
+  z-index: 2;
 }
 
-/* Animaciones */
+/* Reflejo muy sutil bajo el estante */
+.hero-reflection{
+  position:absolute;
+  left:15%;
+  right:15%;
+  bottom:10%;
+  height: 10%;
+  background: radial-gradient(60% 100% at 50% 0%, rgba(0,0,0,.10), transparent 70%);
+  filter: blur(10px);
+  z-index: 1;
+}
+
+/* ===== Animaciones ===== */
 @keyframes fadeInUp{
   from{ transform: translateY(14px); opacity:0; }
   to{ transform: translateY(0); opacity:1; }
 }
-@keyframes floatUp{
-  from{ transform: translateY(8px); opacity:0; }
-  to{ transform: translateY(0); opacity:1; }
-}
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 980px){
   .hero-inner{
     grid-template-columns: 1fr;
     min-height: auto;
-  }
-  .hero-card{
-    width: min(560px, 100%);
   }
   .hero-content{
     text-align: center;
   }
   .hero-badges{
     justify-content: center;
+  }
+  .hero-scene{
+    width:min(600px, 100%);
+    aspect-ratio: 4/3.1;
   }
 }

@@ -35,16 +35,24 @@ function Hero() {
           <p className="hero-help">Respuesta rápida • Atención personalizada</p>
         </div>
 
-        {/* Columna derecha: visual productos */}
+        {/* Columna derecha: visual productos (mockup premium) */}
         <div className="hero-visual">
-          <div className="hero-card">
-            <div className="hero-glow" />
+          <div className="hero-scene" aria-hidden="true">
+            <div className="hero-light"></div>
+
+            <div className="hero-shelf">
+              <div className="hero-shelf-glow"></div>
+              <div className="hero-shelf-edge"></div>
+            </div>
+
             <img
               src={productosHero}
               alt="Productos Joaco Ro"
-              className="hero-image"
+              className="hero-products"
               loading="eager"
             />
+
+            <div className="hero-reflection"></div>
           </div>
         </div>
       </div>
