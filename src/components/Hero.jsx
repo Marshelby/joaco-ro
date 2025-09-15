@@ -32,8 +32,7 @@ function Hero() {
             Pedir ahora por WhatsApp
           </a>
 
-          {/* Línea que falló: aquí va el > antes del texto */}
-          <p className="hero-help"⏱️ Respuesta rápida • Atención personalizada</p>
+          <p className="hero-help">Respuesta rápida • Atención personalizada</p>
         </div>
 
         {/* Columna derecha: visual productos */}
