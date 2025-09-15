@@ -2,40 +2,18 @@
 
 :root{
   --blue-900:#0d47a1;
-  --blue-700:#1565c0;
-  --blue-200:#cfe9ff;
-  --aqua-100:#e6f8ff;
   --green-cta:#25d366;
   --green-cta-hover:#1ebe5d;
   --gold:#ffeb3b;
 }
 
-/* ===== Contenedor general del Hero ===== */
+/* ===== Contenedor general ===== */
 .hero{
   position: relative;
   font-family: 'Poppins', sans-serif;
   background: radial-gradient(1200px 600px at 15% 15%, #e8f5ff 0%, #cfefff 35%, #bfe7ff 55%, #e6fbff 100%);
   overflow: hidden;
 }
-
-.hero::before,
-.hero::after{
-  content:"";
-  position:absolute;
-  border-radius:50%;
-  filter: blur(60px);
-  opacity:.35;
-  pointer-events:none;
-}
-.hero::before{
-  width:420px; height:420px; right:-120px; top:-120px;
-  background: linear-gradient(135deg, #8fd6ff, #b3ffe2);
-}
-.hero::after{
-  width:360px; height:360px; left:-140px; bottom:-120px;
-  background: linear-gradient(135deg, #9ad0ff, #d0ffe6);
-}
-
 .hero-inner{
   max-width: 1200px;
   margin: 0 auto;
@@ -47,18 +25,15 @@
   gap: clamp(1.5rem, 3vw, 3rem);
 }
 
-/* ===== Columna izquierda (texto) ===== */
+/* ===== Columna izquierda ===== */
 .hero-content{ animation: fadeInUp .8s ease both; }
-
 .hero-badges{
-  display:flex; flex-wrap:wrap;
-  gap:.5rem .6rem; margin-bottom:.9rem;
+  display:flex; flex-wrap:wrap; gap:.5rem .6rem; margin-bottom:.9rem;
 }
 .badge{
   display:inline-flex; align-items:center; gap:.4rem;
-  font-size:.9rem; font-weight:600;
-  padding:.35rem .7rem; border-radius:999px; background:#fff;
-  box-shadow:0 4px 14px rgba(0,0,0,.06);
+  font-size:.9rem; font-weight:600; padding:.35rem .7rem;
+  border-radius:999px; background:#fff; box-shadow:0 4px 14px rgba(0,0,0,.06);
 }
 .badge-gold{ background:var(--gold); color:#333; }
 .badge-green{ background:#dff8ea; color:#0b7a45; }
@@ -84,61 +59,48 @@
 .cta-icon{ width:20px; height:20px; }
 .hero-help{ margin-top:.7rem; font-size:.95rem; color:#42566d; }
 
-/* ===== Columna derecha (mockup premium) ===== */
-.hero-visual{ display:flex; justify-content:center; align-items:center; perspective:1200px; }
-
-/* Contenedor tipo escena */
-.hero-scene{
-  position:relative; width:min(540px, 92%); aspect-ratio:4/3; border-radius:24px;
-  background:
-    radial-gradient(120% 100% at 80% 0%, rgba(13,71,161,.12), transparent 60%),
-    linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
-  box-shadow:0 10px 24px rgba(0,0,0,.06), 0 40px 100px rgba(13,71,161,.16);
-  overflow:hidden; transform-style:preserve-3d;
-  transition:transform .5s ease, box-shadow .4s ease;
+/* ===== Columna derecha: panel decorativo ===== */
+.hero-visual{ display:flex; justify-content:center; align-items:center; }
+.hero-panel{
+  position:relative;
+  width:min(540px, 92%);
+  aspect-ratio: 4/3;
+  border-radius:24px;
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+  box-shadow: 0 10px 24px rgba(0,0,0,.06), 0 40px 100px rgba(13,71,161,.16);
+  overflow:hidden;
 }
-.hero-scene:hover{ transform:rotateX(3deg) rotateY(-3deg); box-shadow:0 14px 28px rgba(0,0,0,.07), 0 60px 130px rgba(13,71,161,.22); }
-
-/* Luz superior suave */
-.hero-light{
+.panel-light{
   position:absolute; inset:-10% -10% 55% -10%;
-  background:radial-gradient(80% 70% at 50% 0%, rgba(21,101,192,.18), transparent 70%);
-  filter:blur(22px); pointer-events:none;
+  background: radial-gradient(80% 70% at 50% 0%, rgba(21,101,192,.18), transparent 70%);
+  filter: blur(22px);
+  pointer-events:none;
 }
-
-/* ===== Sello JoacoRo (overlay) ===== */
-.hero-brand{
-  position:absolute; top:14px; left:16px; z-index:3;
-  display:flex; align-items:center; gap:.2rem;
-  font-weight:800; letter-spacing:.2px;
-  color:#0a57d7; text-shadow:0 1px 0 #fff;
+.panel-bubble{
+  position:absolute; border-radius:50%;
+  background: radial-gradient(closest-side, rgba(13,71,161,.12), rgba(13,71,161,.02));
+  filter: blur(1px);
+  animation: float 6s ease-in-out infinite;
 }
-.brand-joaco{ font-size:1.15rem; }
-.brand-ro{ font-size:1.15rem; color:#0d47a1; }
-.brand-drop{ font-size:1.1rem; line-height:1; }
+.b1{ width:120px; height:120px; top:18%; left:12%; animation-delay:0s; }
+.b2{ width:160px; height:160px; top:8%; right:14%; animation-delay:.8s; }
+.b3{ width:100px; height:100px; bottom:14%; left:28%; animation-delay:1.6s; }
 
-/* ===== Imagen: subirla y recortar abajo ===== */
-.hero-products-wrap{
-  position:absolute; left:50%; transform:translateX(-50%);
-  /* Levantamos la imagen para que se vea el header del PNG */
-  bottom:32%;            /* <-- sube el PNG dentro de la tarjeta */
-  width:min(82%, 440px); /* un poco más estrecho para que quepa el header */
-  z-index:2;
-
-  /* Cortamos solo la parte inferior para ocultar textos/franjas del PNG */
-  clip-path: inset(0 0 30% 0);  /* si asoma algo, sube a 32% */
+@keyframes float{
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(-6px); }
 }
-.hero-products{ width:100%; height:auto; object-fit:contain; }
 
 /* ===== Animaciones ===== */
-@keyframes fadeInUp{ from{ transform:translateY(14px); opacity:0; } to{ transform:translateY(0); opacity:1; } }
+@keyframes fadeInUp{
+  from{ transform: translateY(14px); opacity:0; }
+  to{ transform: translateY(0); opacity:1; }
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 980px){
   .hero-inner{ grid-template-columns:1fr; min-height:auto; }
   .hero-content{ text-align:center; }
   .hero-badges{ justify-content:center; }
-  .hero-scene{ width:min(600px, 100%); aspect-ratio:4/3.1; }
-  .hero-brand{ top:12px; left:14px; }
-  .hero-products-wrap{ bottom:30%; width:min(88%, 480px); clip-path: inset(0 0 28% 0); }
+  .hero-panel{ width:min(600px, 100%); aspect-ratio:4/3.1; }
 }

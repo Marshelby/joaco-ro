@@ -1,5 +1,4 @@
 import './Hero.css';
-import productosHero from '../assets/productos.png';
 
 function Hero() {
   return (
@@ -35,28 +34,13 @@ function Hero() {
           <p className="hero-help">Respuesta rápida • Atención personalizada</p>
         </div>
 
-        {/* Columna derecha: mockup premium */}
+        {/* Columna derecha: panel decorativo (sin imagen) */}
         <div className="hero-visual">
-          <div className="hero-scene" aria-hidden="true">
-            {/* Sello JoacoRo superpuesto (por si el PNG no trae el logo). 
-                Si NO quieres este sello, comenta el div .hero-brand */}
-            <div className="hero-brand">
-              <span className="brand-joaco">Joaco</span>
-              <span className="brand-ro">Ro</span>
-              <span className="brand-drop">💧</span>
-            </div>
-
-            <div className="hero-light"></div>
-
-            {/* Imagen subida y recortada abajo para que no se vea la franja/texto */}
-            <div className="hero-products-wrap">
-              <img
-                src={productosHero}
-                alt="Productos Joaco Ro"
-                className="hero-products"
-                loading="eager"
-              />
-            </div>
+          <div className="hero-panel" aria-hidden="true">
+            <div className="panel-light" />
+            <div className="panel-bubble b1" />
+            <div className="panel-bubble b2" />
+            <div className="panel-bubble b3" />
           </div>
         </div>
       </div>
