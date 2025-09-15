@@ -35,12 +35,20 @@ function Hero() {
           <p className="hero-help">Respuesta rápida • Atención personalizada</p>
         </div>
 
-        {/* Columna derecha: mockup premium SIN franja/shelf */}
+        {/* Columna derecha: mockup premium */}
         <div className="hero-visual">
           <div className="hero-scene" aria-hidden="true">
+            {/* Sello JoacoRo superpuesto (por si el PNG no trae el logo). 
+                Si NO quieres este sello, comenta el div .hero-brand */}
+            <div className="hero-brand">
+              <span className="brand-joaco">Joaco</span>
+              <span className="brand-ro">Ro</span>
+              <span className="brand-drop">💧</span>
+            </div>
+
             <div className="hero-light"></div>
 
-            {/* La imagen ahora se recorta abajo y se posiciona más arriba para mostrar 'JoacoRo' */}
+            {/* Imagen subida y recortada abajo para que no se vea la franja/texto */}
             <div className="hero-products-wrap">
               <img
                 src={productosHero}
