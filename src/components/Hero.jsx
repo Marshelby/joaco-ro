@@ -35,7 +35,7 @@ function Hero() {
           <p className="hero-help">Respuesta rápida • Atención personalizada</p>
         </div>
 
-        {/* Columna derecha: visual productos (mockup premium) */}
+        {/* Columna derecha: mockup premium con recorte del PNG */}
         <div className="hero-visual">
           <div className="hero-scene" aria-hidden="true">
             <div className="hero-light"></div>
@@ -45,12 +45,15 @@ function Hero() {
               <div className="hero-shelf-edge"></div>
             </div>
 
-            <img
-              src={productosHero}
-              alt="Productos Joaco Ro"
-              className="hero-products"
-              loading="eager"
-            />
+            {/* Wrapper para poder recortar la parte inferior del PNG (quita el texto negro) */}
+            <div className="hero-products-wrap">
+              <img
+                src={productosHero}
+                alt="Productos Joaco Ro"
+                className="hero-products"
+                loading="eager"
+              />
+            </div>
 
             <div className="hero-reflection"></div>
           </div>

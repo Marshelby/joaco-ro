@@ -161,7 +161,7 @@
   left:6%;
   right:6%;
   bottom:18%;
-  height: 16%;
+  height: 15%;
   border-radius: 14px;
   background: linear-gradient(180deg, rgba(255,255,255,.55), rgba(240,248,255,.35));
   box-shadow:
@@ -183,16 +183,23 @@
   background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,0));
 }
 
-/* Productos centrados */
-.hero-products{
+/* Wrapper para recortar la parte inferior del PNG (elimina texto) */
+.hero-products-wrap{
   position:absolute;
   left:50%;
   bottom:22%;
   transform: translateX(-50%);
   width: min(86%, 460px);
-  height:auto;
-  object-fit: contain;
   z-index: 2;
+  /* recorte inferior ~18%; ajusta este valor si aún aparece algo */
+  clip-path: inset(0 0 18% 0);
+}
+
+/* Imagen de productos */
+.hero-products{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Reflejo muy sutil bajo el estante */
