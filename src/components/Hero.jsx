@@ -1,41 +1,55 @@
-import './Hero.css'
-import productosHero from '../assets/productos.png'
+import './Hero.css';
+import productosHero from '../assets/productos.png';
 
 function Hero() {
   return (
-    <section className="hero">
-      <div className="container">
-        <div className="hero-imagen">
-          <img
-            src={productosHero}
-            alt="Productos Joaco Ro"
-          />
-        </div>
-        <div className="hero-texto">
-          <span className="hero-badge">⭐ Más de 100 clientes felices</span>
-          <small className="hero-subtitulo">📦 Stock disponible para retiro inmediato</small>
-          <h1 className="fadeIn">Tu limpieza, al mejor precio 🧼</h1>
-          <p>Productos confiables y listos para tu hogar o negocio.</p>
-          <p className="hero-frase">🧴 Productos al por mayor y retiro en local</p>
+    <section id="hero" className="hero">
+      <div className="hero-inner">
+        {/* Columna izquierda: texto + CTA */}
+        <div className="hero-content">
+          <div className="hero-badges">
+            <span className="badge badge-gold">⭐ Más de 100 clientes felices</span>
+            <span className="badge badge-green">📦 Retiro inmediato</span>
+            <span className="badge badge-blue">📍 Quilpué</span>
+          </div>
+
+          <h1 className="hero-title">Tu limpieza, al mejor precio</h1>
+          <p className="hero-subtitle">
+            Productos confiables para tu hogar o negocio. Precios al por mayor y retiro en local.
+          </p>
+
           <a
+            className="hero-cta"
             href="https://wa.me/56967215364?text=Hola%20Joaco%20Ro!%20Quiero%20hacer%20un%20pedido%20de%20productos%20de%20limpieza."
             target="_blank"
             rel="noreferrer"
           >
-            <button className="hero-button">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                alt="WhatsApp"
-                className="icono-wsp"
-              />
-              Pedir por WhatsApp
-            </button>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp"
+              className="cta-icon"
+            />
+            Pedir ahora por WhatsApp
           </a>
-          <p className="hero-info-extra">📍 Estamos en Quilpué – atención personalizada</p>
+
+          <p className="hero-help"⏱️ Respuesta rápida • Atención personalizada</p>
+        </div>
+
+        {/* Columna derecha: visual productos */}
+        <div className="hero-visual">
+          <div className="hero-card">
+            <div className="hero-glow" />
+            <img
+              src={productosHero}
+              alt="Productos Joaco Ro"
+              className="hero-image"
+              loading="eager"
+            />
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
